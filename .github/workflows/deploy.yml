@@ -3,6 +3,8 @@ env:
   CI: false
   GITHUB_USERNAME: ${{ github.repository_owner }}
   REACT_APP_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  ASSUME_ROLE: ${{ secrets.ASSUMEROLE }}
+  DISTRIBUTION_ID: ${{ secrets.DISTRIBUTION }}
   USE_GITHUB_DATA: "true"
   BUCKET_NAME : "portfolio-nbalmaceda"
   AWS_REGION : "us-east-1" #Change to reflect your Region
@@ -39,10 +41,17 @@ jobs:
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v3
         with:
-          role-to-assume: arn:aws:iam::409429242499:role/GitHubAction-AssumeRoleWithAction
+          role-to-assume: ${{ env.ASSUME_ROLE }}
           role-session-name: samplerolesession
           aws-region: ${{ env.AWS_REGION }}
 
       - name:  Deploy to AWS S3 🚀
         run: |
           aws s3 sync --delete ./build/ s3://${{ env.BUCKET_NAME }}/
+
+      - name: Invalidate CloudFront
+        uses: chetan/invalidate-cloudfront-action@v2
+        env:
+          DISTRIBUTION: ${{ env.DISTRIBUTION_ID }}
+          PATHS: "/*"
+          AWS_REGION: "us-east-1"

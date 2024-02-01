@@ -2,26 +2,29 @@ name: Build and Deploy
 env:
   CI: false
   GITHUB_USERNAME: ${{ github.repository_owner }}
-  REACT_APP_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This is automatically set by Github Actions
+  #REACT_APP_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This is automatically set by Github Actions
   USE_GITHUB_DATA: "true"
+  BUCKET_NAME : "portfolio-nbalmaceda"
+  AWS_REGION : "us-east-1" #Change to reflect your Region
 on:
   workflow_dispatch:
   push:
     branches:
       - master
+permissions:
+  id-token: write   # This is required for requesting the JWT
+  contents: read    # This is required for actions/checkout
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v3 # If you're using actions/checkout@v3 you must set persist-credentials to false in most cases for the deployment to work correctly.
-        with:
-          persist-credentials: false
+      - name: Git clone the repository
+        uses: actions/checkout@v4
 
       - name: Setup Node.js 🔧
         uses: actions/setup-node@v3.8.1
         with:
-          node-version: 18.x
+          node-version: 18.19.0
 
       - name: Update npm 🚀
         run: npm install -g npm@latest
@@ -30,9 +33,22 @@ jobs:
         run: |
           npm install
           npm run build
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+  
+      - name: configure aws credentials
+        uses: aws-actions/configure-aws-credentials@v3
         with:
-          GITHUB_TOKEN : ${{ secrets.GITHUB_TOKEN }} # This is provided by GitHub.
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: build # The folder the action should deploy.
+          role-to-assume: arn:aws:iam::409429242499:role/GitHubAction-AssumeRoleWithAction
+          role-session-name: samplerolesession
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name:  Deploy to AWS S3 🚀
+        run: |
+          aws s3 sync --delete ./build/* s3://${{ env.BUCKET_NAME }}/
+          
+      #- name: Deploy
+      #  uses: JamesIves/github-pages-deploy-action@v4
+      #  with:
+      #    GITHUB_TOKEN : ${{ secrets.GITHUB_TOKEN }} # This is provided by GitHub.
+      #    BRANCH: gh-pages # The branch the action should deploy to.
+      #    FOLDER: build # The folder the action should deploy.
+

@@ -45,4 +45,4 @@ jobs:
 
       - name:  Deploy to AWS S3 🚀
         run: |
-          aws s3 sync --delete ./build/* s3://${{ env.BUCKET_NAME }}/
+          aws s3 sync --delete ./build/ s3://${{ env.BUCKET_NAME }}/

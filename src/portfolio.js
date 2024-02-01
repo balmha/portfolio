@@ -23,10 +23,10 @@ const greeting = {
   username: "Nicolas Balmaceda",
   title: "Hi all, I'm Nico",
   subTitle: emoji(
-    "A passionate Solutions Architect and DevOps Engineer 🚀 having an experience of designing and building complex AWS Solutions for many companies, right now evolving in the Web3 world."
+    "A passionate Sysadmin/DevOps 🚀 having an experience of designing and building complex AWS Solutions for many companies, right now evolving in the Web3 world."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/18SHUDWH8JqLNLzUAqw1jpVBS1NY7935_/view?usp=sharing", // Set to empty to hide the button
+    "https://drive.google.com/file/d/1iUvI3j-Ca79aRPc31j55Hp84IXvQ-hBv/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -45,23 +45,26 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "Witty Sysadmin/DevOps/Solutions-Architect with huge experience in building, deploying and supporting highly-scalable solutions",
+  subTitle: "Witty Sysadmin/DevOps/Solutions Architect with huge experience in building, deploying and supporting highly-scalable solutions.",
   skills: [
     emoji(
-      "⚡ Creation and support of complex CI/CD solutions in many platforms (Github, Gitlab, Bitbucket, Jenkins, ArgoCD, AWS Codexxx, etc."
+      "⚡ Creation and support of complex CI/CD solutions in many platforms (Github, Gitlab, Bitbucket, Jenkins, ArgoCD, AWS Code stack, etc.)"
     ),
-    emoji("⚡ Building and deploying of multi-tier solutions to compute platforms like ECS, EKS, self-hosted Kubernetes, EC2, and whatever compute platform of main cloud providers"),
+    emoji("⚡ Build and deploy of multi-tier solutions to compute platforms like ECS, EKS, self-hosted Kubernetes, EC2, and whatever compute platform of main cloud providers."),
     emoji(
-      "⚡ Monitoring and logging integration and troubleshooting over many platforms like Cloudwatch, Datadog, ELK Stack, Grafana, Prometheus, etc etc."
+      "⚡ Monitoring and logging integration and troubleshooting over many platforms like Cloudwatch, Datadog, ELK Stack, Grafana, Prometheus, etc."
     ),
     emoji(
-      "⚡ Migrations (lift&shift, refactoring, replatforming) and solutions modernization"
+      "⚡ Migrations and modernization (Lift&Shift, Refactoring, Replatforming)."
     ),
     emoji(
       "⚡ Analysis and use of different programming languages for problem solving and self projects (Python, Javascript, Node.js, Solidity, Java)."
     ),
     emoji(
-      "⚡ The best soft skills in the market, I have been leading huge DevOps teams, performing project management duties and applying successfully to business-level programs for my AWS Partner Advanced company"
+      "⚡ Implementation and support of SQL and NonSQL databases including PaaS AWS databases like RDS, DynamoDB and Redshift."
+    ),
+    emoji(
+      "⚡ The best soft skills in the market, I have been leading huge DevOps teams, performing project management duties and applying successfully to business-level programs for an AWS Partner Advanced company."
     )
   ],
 
@@ -71,23 +74,35 @@ https://fontawesome.com/icons?d=gallery */
   softwareSkills: [
     {
       skillName: "AWS",
-      fontAwesomeClassname: "fa-brands fa-aws"
+      fontAwesomeClassname: "fab fa-aws"
     },
     {
-      skillName: "Github",
-      fontAwesomeClassname: "fa-brands fa-github"
-    },
-    {
-      skillName: "Jenkins",
-      fontAwesomeClassname: "fa-brands fa-jenkins"
+      skillName: "Linux",
+      fontAwesomeClassname: "fab fa-linux"
     },
     {
       skillName: "Docker",
-      fontAwesomeClassname: "fa-brands fa-docker"
+      fontAwesomeClassname: "fab fa-docker"
+    },
+    {
+      skillName: "Github",
+      fontAwesomeClassname: "fab fa-github"
+    },
+    {
+      skillName: "Gitlab",
+      fontAwesomeClassname: "fab fa-gitlab"
+    },
+    {
+      skillName: "Jenkins",
+      fontAwesomeClassname: "fab fa-jenkins"
     },
     {
       skillName: "Python",
       fontAwesomeClassname: "fab fa-python"
+    },
+    {
+      skillName: "Node",
+      fontAwesomeClassname: "fab fa-node"
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -99,8 +114,8 @@ const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "Universidad Nacional del Noroeste de la Provincia de Buenos Aires",
-      logo: require("./assets/images/harvardLogo.png"),
+      schoolName: "Universidad Nacional del Noroeste - Provincia de Buenos Aires",
+      logo: require("./assets/images/unnoba.png"),
       subHeader: "Degree in System Analyst",
       duration: "2015 - 2019",
       desc: "Qualified professional for the analysis and design of computer systems, software development in various languages and environments, both for Backend and Frontend development using agile methodologies. Design and implementation of database systems, data analytics and infrastructure."
@@ -114,20 +129,20 @@ const techStack = {
   viewSkillBars: true, //Set it to true to show Proficiency Section
   experience: [
     {
+      Stack: "Sysadmin / Networkadmin",
+      progressPercentage: "100%"
+    },
+    {
       Stack: "DevOps", //Insert stack or technology you have experience in
       progressPercentage: "100%" //Insert relative proficiency in percentage
     },
     {
-      Stack: "Sysadmin",
-      progressPercentage: "100%"
-    },
-    {
-      Stack: "Network Administrator",
-      progressPercentage: "100%"
-    },
-    {
       Stack: "Solutions Architect",
       progressPercentage: "100%"
+    },
+    {
+      Stack: "Databases",
+      progressPercentage: "85%"
     },
     {
       Stack: "Programming",
@@ -151,9 +166,9 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Solutions Architect",
+      role: "Solutions Architect / DevOps Engineer",
       company: "Teracloud",
-      companylogo: require("./assets/images/facebookLogo.png"),
+      companylogo: require("./assets/images/teracloud.png"),
       date: "Jan 2022 – Jan 2024",
       desc: "Advanced knowledge and skills in providing complex solutions to large cloud architectures, optimizing security, cost, and performance, and automating manual processes",
       descBullets: [
@@ -167,14 +182,14 @@ const workExperiences = {
     {
       role: "Head of Architecture and Innovation",
       company: "Rizobacter",
-      companylogo: require("./assets/images/quoraLogo.png"),
+      companylogo: require("./assets/images/rizobacter.png"),
       date: "Jul 2017 – Jan 2022",
       desc: "Analysis, design, implementation and maintenance of physical/logical networking infrastructure and enterprise datacenters (cloud and on-premise)."
     },
     {
       role: "Network Administrator",
       company: "EET N°1 'Bme Mitre'",
-      companylogo: require("./assets/images/airbnbLogo.png"),
+      companylogo: require("./assets/images/eetn1.jpeg"),
       date: "Jan 2016 – Jul 2017",
       desc: "Analysis, design, implementation and maintenance of physical/logical networking infrastructure and public government servers."
     }
@@ -196,7 +211,7 @@ const bigProjects = {
   subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
+      image: require("./assets/images/itau.webp"),
       projectName: "Saayahealth",
       projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       footerLink: [
@@ -208,7 +223,7 @@ const bigProjects = {
       ]
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
+      image: require("./assets/images/itau.webp"),
       projectName: "Nextu",
       projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       footerLink: [
@@ -234,7 +249,7 @@ const achievementSection = {
     {
       title: "AWS Certified Solutions Architect - Professional",
       subtitle: "Completed Certifcation for AWS Solutions Architect as Professional. ID: 0PCFHVHKXJEQ17KM",
-      image: require("./assets/images/pwaLogo.webp"),
+      image: require("./assets/images/sapro.png"),
       imageAlt: "AWS Logo",
       footerLink: [
         {name: "Certification", url: "https://www.credly.com/badges/fa11a2ed-4317-48d2-9efd-ed9735c55588"},
@@ -244,7 +259,7 @@ const achievementSection = {
     {
       title: "AWS Certified Security - Specialty",
       subtitle: "Completed Certifcation for AWS Security as Specialty. ID: 2M1EVV31YJQEQWGP",
-      image: require("./assets/images/pwaLogo.webp"),
+      image: require("./assets/images/sspecialty.png"),
       imageAlt: "AWS Logo",
       footerLink: [
         {name: "Certification", url: "https://www.credly.com/badges/314c26c7-648a-40f4-95ef-0db469f033fb"},
@@ -254,7 +269,7 @@ const achievementSection = {
     {
       title: "AWS Certified Solutions Architect - Associate",
       subtitle: "Completed Certifcation for AWS Solutions Architect as Associate. ID: R5ZY9L9DF1B1QB3K",
-      image: require("./assets/images/pwaLogo.webp"),
+      image: require("./assets/images/saassociate.png"),
       imageAlt: "AWS Logo",
       footerLink: [
         {name: "Certification", url: "https://www.credly.com/badges/2ed55549-eec0-4787-a25a-0816baa3fdb9"},
@@ -264,10 +279,30 @@ const achievementSection = {
     {
       title: "AWS Certified Sysops Administrator - Associate",
       subtitle: "Completed Certifcation for AWS Sysops Administrator as Associate. ID: 9ET1755CYMB1Q53K",
-      image: require("./assets/images/pwaLogo.webp"),
+      image: require("./assets/images/sysopsassociate.png"),
       imageAlt: "AWS Logo",
       footerLink: [
-        {name: "Certification", url: "https://www.credly.com/badges/fa11a2ed-4317-48d2-9efd-ed9735c55588"},
+        {name: "Certification", url: "https://www.credly.com/badges/34d46ddc-c293-4f63-8069-4bb68a02eaa9"},
+
+      ]
+    },
+    {
+      title: "AWS Certified Cloud Practitioner",
+      subtitle: "Completed Certifcation for AWS Cloud Practitioner. ID: 69ZNDH0BME4E1KCS",
+      image: require("./assets/images/cloudpractitioner.png"),
+      imageAlt: "AWS Logo",
+      footerLink: [
+        {name: "Certification", url: "https://www.credly.com/badges/d8c195a1-4f20-4fc8-a6f6-1e4b27d1521c"},
+
+      ]
+    },
+    {
+      title: "CCNA: Enterprise Networking, Security, and Automation",
+      subtitle: "Completed Certifcation for CCNA 3",
+      image: require("./assets/images/ccna3.png"),
+      imageAlt: "CCNA Logo",
+      footerLink: [
+        {name: "Certification", url: "https://www.credly.com/badges/a78e651a-530b-4d16-8364-63b2df9f6a35"},
 
       ]
     },
@@ -275,21 +310,27 @@ const achievementSection = {
       title: "Huawei ICT Competition",
       subtitle:
         "After pass the network certification HCIA and won the national competition among other 3 participants of the Network Track in my country, we traveled to Mexico to represent Argentina. The competition consisted of designing network topologies through the use of Huawei tools and solving all the problems posed by our hosts.",
-      image: require("./assets/images/codeInLogo.webp"),
+      image: require("./assets/images/huaweiict.jpeg"),
       imageAlt: "Huawei Logo",
       footerLink: [
-        {
-          name: "Certification",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
+        { 
+          name: "1º Prize - National award",
+          url: ""
         }
       ]
     },
     {
-      title: "Itaú Challenge",
+      title: "Itaú/Red Hat Challenge",
       subtitle:
         "I won the 1st prize in the national competition, which consisted of making a playful application that can be used by young people, through which they can have fun and at the same time enter the world of finance in which they will learn to create savings accounts, invest in fixed terms, apply for credit cards, etc. Today the application is a financial game under the control of Red Hat and Banco Itaú.",
-      image: require("./assets/images/googleAssistantLogo.webp"),
-      imageAlt: "Iatu Logo"
+      image: require("./assets/images/itau.webp"),
+      imageAlt: "Iatu Logo",
+      footerLink: [
+        {
+          name: "1º Prize",
+          url: ""
+        }
+      ]
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -300,7 +341,7 @@ const achievementSection = {
 const blogSection = {
   title: "Blogs",
   subtitle:
-    "With Love for apprting cool stuff to the AWS community, I love to write and teach others what I have learnt.",
+    "In order to apport cool stuff to the AWS community, I love to write and teach others what I have learnt.",
   displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
   blogs: [
     {
@@ -352,15 +393,14 @@ const podcastSection = {
 
   // Please Provide with Your Podcast embeded Link
   podcast: [
-    "in athoer moment"
+    "in another moment"
   ],
   display: false // Set false to hide this section, defaults to true
 };
 
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
-  subtitle:
-    "Discuss a project or just want to say hi? My Inbox is open for all.",
+  subtitle: "Discuss a project or just want to say hi? My Inbox is open for all.",
   number: "+5492477662345",
   email_address: "balmacedanicolas4@gmail.com"
 };
@@ -369,7 +409,7 @@ const contactInfo = {
 
 const twitterDetails = {
   userName: "balmhaceda", //Replace "twitter" with your twitter username without @
-  display: true // Set true to display this section, defaults to false
+  display: false // Set true to display this section, defaults to false
 };
 
 const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer

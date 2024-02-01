@@ -189,7 +189,7 @@ const workExperiences = {
     {
       role: "Network Administrator",
       company: "EET N°1 'Bme Mitre'",
-      companylogo: require("./assets/images/eetn1.jpeg"),
+      companylogo: require("./assets/images/eetn1.png"),
       date: "Jan 2016 – Jul 2017",
       desc: "Analysis, design, implementation and maintenance of physical/logical networking infrastructure and public government servers."
     }

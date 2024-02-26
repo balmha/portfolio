@@ -217,7 +217,7 @@ const bigProjects = {
       footerLink: [
         {
           name: "Visit Website",
-          url: "http://saayahealth.com/"
+          url: ""
         }
         //  you can add extra buttons here.
       ]
@@ -229,7 +229,7 @@ const bigProjects = {
       footerLink: [
         {
           name: "Visit Website",
-          url: "http://nextu.se/"
+          url: ""
         }
       ]
     }
@@ -322,7 +322,7 @@ const achievementSection = {
     {
       title: "Itaú/Red Hat Challenge",
       subtitle:
-        "I won the 1st prize in the national competition, which consisted of making a playful application that can be used by young people, through which they can have fun and at the same time enter the world of finance in which they will learn to create savings accounts, invest in fixed terms, apply for credit cards, etc. Today the application is a financial game under the control of Red Hat and Banco Itaú.",
+        "I won the 1st prize in the national competition, which consisted of making a playful application that can be used by young people, through which they can have fun and at the same time enter the world of finance in which they will learn to create savings accounts, invest in fixed terms, apply for credit cards, etc. Today the application is a financial game under the control of Red Hat and Banco Itau.",
       image: require("./assets/images/itau.webp"),
       imageAlt: "Iatu Logo",
       footerLink: [
